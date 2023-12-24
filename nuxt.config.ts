@@ -2,16 +2,25 @@
 export default defineNuxtConfig({
   runtimeConfig: {
     // The private keys which are only available server-side
-    apiSecret: '123',
+    apiSecret: "123",
     // Keys within public are also exposed client-side
     public: {
-      apiBase: '/api'
-    }
+      apiBase: "/api",
+    },
   },
 
-  css: [
-		'@/assets/styles/main.scss'
-	],
+  css: ["@/assets/styles/main.scss"],
 
-  devtools: { enabled: true }
-})
+  modules: [
+    [
+      "@nuxtjs/google-fonts",
+      {
+        families: {
+          Roboto: true,
+        },
+      },
+    ],
+  ],
+
+  devtools: { enabled: true },
+});
