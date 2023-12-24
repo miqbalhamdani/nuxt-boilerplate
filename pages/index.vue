@@ -14,4 +14,14 @@ console.log(runtimeConfig.apiSecret);
 
 // print /api on console browser
 console.log(runtimeConfig.public.apiBase);
+
+const { data } = await useAsyncData(async () => {
+  const [hotels, patners] = await Promise.all([
+    $fetch('https://www.misteraladin.com/api/generals/partners', { query: { perpage: 6 } }),
+    $fetch('https://www.misteraladin.com/api/generals/hotel-popular-destinations')
+  ])
+
+  return { hotels, patners }
+})
+console.log('data: ', data);
 </script>
