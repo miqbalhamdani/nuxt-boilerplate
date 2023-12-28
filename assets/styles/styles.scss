@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import "_variables.scss";
+
+* {
+  font-family: "Roboto", sans-serif !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  &::before,
+  &::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  background: #fcfbfc;
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tabler-icon {
+  stroke-width: 1.5;
+}
+
+.divider {
+  background-color: $color-white;
+  margin: 20px;
+  opacity: 0.1;
+}
+.divider-end {
+  margin: 20px 10px;
+  opacity: 0.5;
+  border: 1px dashed $color-white;
+}
+
+[data-tippy-root] {
+  max-width: 250px !important;
+  .tippy-box[data-theme~="customTheme"] {
+    background-color: $color-black-90;
+    color: $color-white;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 300;
+    .tippy-content {
+      padding: 8px 12px;
+    }
+    .tippy-arrow {
+      color: $color-black-90;
+    }
+  }
+  .tippy-box[data-theme~="customTheme"][data-placement^="right"]
+    > .tippy-arrow::before {
+    left: -6px;
+    border-right-color: $color-black-90;
+    border-width: 6px 6px 6px 6px;
+    border-color: #2a2b2c;
+    border-bottom-left-radius: 4px;
+    transform: translateY(-50%) rotate(45deg);
+    transform-origin: center;
+    top: 50%;
+  }
+}

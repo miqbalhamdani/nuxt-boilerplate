@@ -9,11 +9,13 @@ export default defineNuxtConfig({
     },
   },
 
+  ssr: false,
+
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
+    pageTransition: { name: "page", mode: "out-in" },
   },
 
-  css: ["@/assets/styles/main.scss"],
+  css: ["@/assets/styles/styles.scss"],
 
   modules: [
     [
