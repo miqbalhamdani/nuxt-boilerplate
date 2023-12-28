@@ -3,6 +3,10 @@
     <h1 class="d-flex justify-content-center fs-3 fw-bold text-secondary">
       Nuxt Koltiva Boilerplate
     </h1>
+
+    <q-btn color="primary" label="Primary" />
+    <QBtn color="secondary" label="Secondary" />
+    <LazyQBtn color="amber" glossy label="Amber" />
   </div>
 </template>
 
