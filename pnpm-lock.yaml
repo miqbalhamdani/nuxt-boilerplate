@@ -19,6 +19,9 @@ devDependencies:
   nuxt:
     specifier: ^3.8.2
     version: 3.8.2(sass@1.69.5)(vite@5.0.10)
+  prettier:
+    specifier: 3.1.1
+    version: 3.1.1
   sass:
     specifier: ^1.69.5
     version: 1.69.5
@@ -4858,6 +4861,12 @@ packages:
       nanoid: 3.3.7
       picocolors: 1.0.0
       source-map-js: 1.0.2
+    dev: true
+
+  /prettier@3.1.1:
+    resolution: {integrity: sha512-22UbSzg8luF4UuZtzgiUOfcGM8s4tjBv6dJRT7j275NXsy2jb4aJa4NNveul5x4eqlF1wuhuR2RElK71RvmVaw==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /pretty-bytes@6.1.1:

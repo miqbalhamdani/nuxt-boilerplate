@@ -1,8 +1,6 @@
 <template>
   <div>
-    <h1 class="d-flex justify-content-center fs-3 fw-bold text-secondary">
-      Nuxt Koltiva Boilerplate
-    </h1>
+    <h1 class="d-flex justify-content-center fs-3 fw-bold text-secondary">Nuxt Koltiva Boilerplate</h1>
   </div>
 </template>
 
@@ -17,11 +15,11 @@ console.log(runtimeConfig.public.apiBase);
 
 const { data } = await useAsyncData(async () => {
   const [hotels, patners] = await Promise.all([
-    $fetch('https://www.misteraladin.com/api/generals/partners', { query: { perpage: 6 } }),
-    $fetch('https://www.misteraladin.com/api/generals/hotel-popular-destinations')
-  ])
+    $fetch("https://www.misteraladin.com/api/generals/partners", { query: { perpage: 6 } }),
+    $fetch("https://www.misteraladin.com/api/generals/hotel-popular-destinations"),
+  ]);
 
-  return { hotels, patners }
-})
-console.log('data: ', data);
+  return { hotels, patners };
+});
+console.log("data: ", data);
 </script>

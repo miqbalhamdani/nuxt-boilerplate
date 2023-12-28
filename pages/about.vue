@@ -1,8 +1,6 @@
 <template>
   <div>
-    <h1 class="d-flex justify-content-center fs-3 fw-bold text-secondary">
-      Page About
-    </h1>
+    <h1 class="d-flex justify-content-center fs-3 fw-bold text-secondary">Page About</h1>
   </div>
 </template>
 
@@ -16,9 +14,6 @@ const query = {
   page: 1,
   perpage: 5,
 };
-const { data } = await useFetch(
-  "https://www.misteraladin.com/api/generals/banners",
-  { query }
-);
-console.log('data: ', data);
+const { data } = await useFetch("https://www.misteraladin.com/api/generals/banners", { query });
+console.log("data: ", data);
 </script>
