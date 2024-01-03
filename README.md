@@ -9,8 +9,8 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 - [ ] commitlint
   - [ ] commitlint/cli
   - [ ] commitlint/config-conventional
-- [ ] lint-staged
-- [ ] husky
+- [x] lint-staged
+- [x] husky
 - [ ] install UI
 - [ ] State Management
 - [ ] Unit Testing

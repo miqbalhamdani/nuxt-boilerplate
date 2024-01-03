@@ -13,6 +13,11 @@
     "lint": "pnpm run lint:eslint && pnpm run lint:style",
     "prepare": "husky install"
   },
+  "lint-staged": {
+    "*.{js,ts,vue}": "eslint --cache",
+    "*.{css,scss,sass,html,vue}": "stylelint",
+    "*.**": "prettier --check --ignore-unknown"
+  },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
@@ -22,6 +27,7 @@
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
     "nuxt": "^3.8.2",
     "postcss-html": "^1.5.0",
     "prettier": "3.1.1",
