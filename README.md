@@ -4,6 +4,14 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 
 ## Todo
 
+- [ ] re-config eslint
+- [x] stylelint
+- [ ] commitlint
+  - [ ] commitlint/cli
+  - [ ] commitlint/config-conventional
+- [ ] lint-staged
+- [ ] husky
+- [ ] install UI
 - [ ] State Management
 - [ ] Unit Testing
 

@@ -25,6 +25,7 @@ export default defineNuxtConfig({
       },
     ],
     "@nuxtjs/eslint-module",
+    "@nuxtjs/stylelint-module",
   ],
 
   typescript: {
