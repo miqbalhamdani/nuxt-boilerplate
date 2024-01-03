@@ -1,0 +1,33 @@
+// Width
+.ktv-w-full {
+  width: 100%;
+}
+.ktv-w-screen {
+  width: 100vw;
+}
+.ktv-w-min {
+  width: min-content;
+}
+.ktv-w-max {
+  width: max-content;
+}
+.ktv-w-fit {
+  width: fit-content;
+}
+
+// Height
+.ktv-h-full {
+  height: 100%;
+}
+.ktv-h-screen {
+  height: 100vh;
+}
+.ktv-h-min {
+  height: min-content;
+}
+.ktv-h-max {
+  height: max-content;
+}
+.ktv-h-fit {
+  height: fit-content;
+}

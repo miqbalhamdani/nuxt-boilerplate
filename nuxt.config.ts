@@ -10,10 +10,11 @@ export default defineNuxtConfig({
   },
 
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
+    pageTransition: { name: "page", mode: "out-in" },
   },
 
-  css: ["@/assets/styles/main.scss"],
+  css: ["@/assets/scss/style.scss"],
+  // css: ["@/assets/styles/main.scss"],
 
   modules: [
     [
@@ -24,7 +25,7 @@ export default defineNuxtConfig({
         },
       },
     ],
-    'nuxt-quasar-ui',
+    "nuxt-quasar-ui",
   ],
 
   devtools: { enabled: true },

@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+@import "_background.scss";
+@import "_border.scss";
+@import "_color.scss";
+@import "_effect.scss";
+@import "_flexbox.scss";
+@import "_interactivity.scss";
+@import "_layout.scss";
+@import "_sizing.scss";
+@import "_spacing.scss";
+@import "_transform.scss";
+@import "_transition.scss";
+@import "_typography.scss";
+@import "_utility.scss";
+@import "_variable.scss";
+
+* {
+  font-family: "Roboto", sans-serif !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}

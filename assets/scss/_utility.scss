@@ -1,0 +1,40 @@
+// Text Ellipsis
+.ktv-text-ellipsis-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  // max-height: 21px;
+}
+.ktv-text-ellipsis-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  // max-height: 42px;
+}
+
+// Hover
+.ktv-cursor-pointer {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// Stroke Width
+.ktv-stroke-0 {
+  stroke-width: 0;
+}
+.ktv-stroke-1 {
+  stroke-width: 1;
+}
+.ktv-stroke-1-5 {
+  stroke-width: 1.5;
+}
+.ktv-stroke-2 {
+  stroke-width: 2;
+}

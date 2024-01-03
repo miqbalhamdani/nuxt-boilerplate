@@ -1,0 +1,72 @@
+@import "@/assets/scss/style.scss";
+
+.button {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.5s, background-color 0.5s;
+  text-transform: capitalize;
+  min-height: auto;
+  line-height: normal;
+  column-gap: 8px;
+  svg {
+    width: 18px;
+    height: 18px;
+    stroke-width: 1.5;
+  }
+  &.--default {
+    border: none;
+    background-color: $green-100;
+    color: $white;
+    &:hover {
+      background: $green-110;
+    }
+    &:focus {
+      background: $green-120;
+    }
+  }
+  &.--green-outline {
+    background-color: transparent;
+    color: $green-100;
+    border: 1px solid $green-100;
+    &:hover {
+      color: $green-120;
+      border: 1px solid $green-120;
+    }
+    &:focus {
+      color: $green-120;
+      border: 1px solid $green-120;
+    }
+  }
+  &.--large {
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+    height: 38px;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  &.--medium {
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+    height: 34px;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px;
+  }
+  &.--small {
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+    height: 30px;
+    font-size: 12px;
+    border-radius: 6px;
+    padding: 8px;
+  }
+}

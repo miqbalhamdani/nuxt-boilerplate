@@ -1,0 +1,165 @@
+// Transition Property
+.ktv-transition-none {
+  transition-property: none;
+}
+.ktv-transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.ktv-transition {
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.ktv-transition-colors {
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.ktv-transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.ktv-transition-shadow {
+  transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.ktv-transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+// Transition Duration
+.ktv-duration-0 {
+  transition-duration: 0s;
+}
+.ktv-duration-75 {
+  transition-duration: 75ms;
+}
+.ktv-duration-100 {
+  transition-duration: 100ms;
+}
+.ktv-duration-150 {
+  transition-duration: 150ms;
+}
+.ktv-duration-200 {
+  transition-duration: 200ms;
+}
+.ktv-duration-300 {
+  transition-duration: 300ms;
+}
+.ktv-duration-500 {
+  transition-duration: 500ms;
+}
+.ktv-duration-700 {
+  transition-duration: 700ms;
+}
+.ktv-duration-1000 {
+  transition-duration: 1000ms;
+}
+
+// Transition Timing Function
+.ktv-ease-linear {
+  transition-timing-function: linear;
+}
+.ktv-ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+.ktv-ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+.ktv-ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// Transition Delay
+.ktv-delay-0 {
+  transition-delay: 0s;
+}
+.ktv-delay-75 {
+  transition-delay: 75ms;
+}
+.ktv-delay-100 {
+  transition-delay: 100ms;
+}
+.ktv-delay-150 {
+  transition-delay: 150ms;
+}
+.ktv-delay-200 {
+  transition-delay: 200ms;
+}
+.ktv-delay-300 {
+  transition-delay: 300ms;
+}
+.ktv-delay-500 {
+  transition-delay: 500ms;
+}
+.ktv-delay-700 {
+  transition-delay: 700ms;
+}
+.ktv-delay-1000 {
+  transition-delay: 1000ms;
+}
+
+// Animations
+.ktv-animate-none {
+  animation: none;
+}
+.ktv-animate-spin {
+  animation: spin 1s linear infinite;
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+.ktv-animate-ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+
+  @keyframes ping {
+    75%,
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+}
+.ktv-animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+}
+.ktv-animate-bounce {
+  animation: bounce 1s infinite;
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(-25%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+}

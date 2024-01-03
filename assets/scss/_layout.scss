@@ -1,0 +1,196 @@
+// Display
+.ktv-d-block {
+  display: block;
+}
+.ktv-d-inline-block {
+  display: inline-block;
+}
+.ktv-d-inline {
+  display: inline;
+}
+.ktv-d-flex {
+  display: flex;
+}
+.ktv-d-inline-flex {
+  display: inline-flex;
+}
+.ktv-d-table {
+  display: table;
+}
+.ktv-d-inline-table {
+  display: inline-table;
+}
+.ktv-d-table-caption {
+  display: table-caption;
+}
+.ktv-d-table-cell {
+  display: table-cell;
+}
+.ktv-d-table-column {
+  display: table-column;
+}
+.ktv-d-table-column-group {
+  display: table-column-group;
+}
+.ktv-d-table-footer-group {
+  display: table-footer-group;
+}
+.ktv-d-table-header-group {
+  display: table-header-group;
+}
+.ktv-d-table-row-group {
+  display: table-row-group;
+}
+.ktv-d-table-row {
+  display: table-row;
+}
+.ktv-d-flow-root {
+  display: flow-root;
+}
+.ktv-d-grid {
+  display: grid;
+}
+.ktv-d-inline-grid {
+  display: inline-grid;
+}
+.ktv-d-contents {
+  display: contents;
+}
+.ktv-d-list-item {
+  display: list-item;
+}
+.ktv-d-none {
+  display: none;
+}
+
+// Float
+.ktv-float-right {
+  float: right;
+}
+.ktv-float-left {
+  float: left;
+}
+.ktv-float-none {
+  float: none;
+}
+
+// Object Fit
+.ktv-object-fit-contain {
+  object-fit: contain;
+}
+.ktv-object-fit-cover {
+  object-fit: cover;
+}
+.ktv-object-fit-fill {
+  object-fit: fill;
+}
+.ktv-object-fit-none {
+  object-fit: none;
+}
+.ktv-object-fit-scale-down {
+  object-fit: scale-down;
+}
+
+// Object Position
+.ktv-object-position-bottom {
+  object-position: bottom;
+}
+.ktv-object-position-center {
+  object-position: center;
+}
+.ktv-object-position-left {
+  object-position: left;
+}
+.ktv-object-position-left-bottom {
+  object-position: left bottom;
+}
+.ktv-object-position-left-top {
+  object-position: left top;
+}
+.ktv-object-position-right {
+  object-position: right;
+}
+.ktv-object-position-right-bottom {
+  object-position: right bottom;
+}
+.ktv-object-position-right-top {
+  object-position: right top;
+}
+.ktv-object-position-top {
+  object-position: top;
+}
+
+// Position
+.ktv-position-static {
+  position: static;
+}
+.ktv-position-fixed {
+  position: fixed;
+}
+.ktv-position-absolute {
+  position: absolute;
+}
+.ktv-position-relative {
+  position: relative;
+}
+.ktv-position-sticky {
+  position: sticky;
+}
+
+// Overflow
+.ktv-overflow-auto {
+  overflow: auto;
+}
+.ktv-overflow-hidden {
+  overflow: hidden;
+}
+.ktv-overflow-clip {
+  overflow: clip;
+}
+.ktv-overflow-visible {
+  overflow: visible;
+}
+.ktv-overflow-scroll {
+  overflow: scroll;
+}
+.ktv-overflow-x-auto {
+  overflow-x: auto;
+}
+.ktv-overflow-y-auto {
+  overflow-y: auto;
+}
+.ktv-overflow-x-hidden {
+  overflow-x: hidden;
+}
+.ktv-overflow-y-hidden {
+  overflow-y: hidden;
+}
+.ktv-overflow-x-clip {
+  overflow-x: clip;
+}
+.ktv-overflow-y-clip {
+  overflow-y: clip;
+}
+.ktv-overflow-x-visible {
+  overflow-x: visible;
+}
+.ktv-overflow-y-visible {
+  overflow-y: visible;
+}
+.ktv-overflow-x-scroll {
+  overflow-x: scroll;
+}
+.ktv-overflow-y-scroll {
+  overflow-y: scroll;
+}
+
+// Visibility
+.ktv-visible {
+  visibility: visible;
+}
+.ktv-invisible {
+  visibility: hidden;
+}
+.ktv-visible-collapse {
+  visibility: collapse;
+}
