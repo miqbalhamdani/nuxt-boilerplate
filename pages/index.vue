@@ -8,10 +8,10 @@
 const runtimeConfig = useRuntimeConfig();
 
 // print /api_secret_token on terminal, and replace a nuxt config runtimeConfig
-console.log(runtimeConfig.apiSecret);
+console.log(runtimeConfig.apiSecret); // eslint-disable-line no-console
 
 // print /api on console browser
-console.log(runtimeConfig.public.apiBase);
+console.log(runtimeConfig.public.apiBase); // eslint-disable-line no-console
 
 const { data } = await useAsyncData(async () => {
   const [hotels, patners] = await Promise.all([
@@ -21,5 +21,5 @@ const { data } = await useAsyncData(async () => {
 
   return { hotels, patners };
 });
-console.log("data: ", data);
+console.log("data: ", data); // eslint-disable-line no-console
 </script>

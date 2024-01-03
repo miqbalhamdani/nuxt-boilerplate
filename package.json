@@ -9,7 +9,9 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint:eslint": "eslint --fix --ext .js,.ts,.vue,.pug .",
-    "lint:style": "stylelint --fix \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore"
+    "lint:style": "stylelint --fix \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
+    "lint": "pnpm run lint:eslint && pnpm run lint:style",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
@@ -19,6 +21,7 @@
     "@nuxtjs/stylelint-module": "^5.1.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
+    "husky": "^8.0.3",
     "nuxt": "^3.8.2",
     "prettier": "3.1.1",
     "sass": "^1.69.5",
@@ -31,7 +34,6 @@
     "vue-tsc": "^1.8.27"
   },
   "dependencies": {
-    "bootstrap": "^5.3.2",
-    "remove": "^0.1.5"
+    "bootstrap": "^5.3.2"
   }
 }

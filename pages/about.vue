@@ -15,5 +15,5 @@ const query = {
   perpage: 5,
 };
 const { data } = await useFetch("https://www.misteraladin.com/api/generals/banners", { query });
-console.log("data: ", data);
+console.log("data: ", data); // eslint-disable-line no-console
 </script>
