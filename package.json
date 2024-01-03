@@ -1,7 +1,6 @@
 {
   "name": "nuxt-app",
   "private": true,
-  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -11,13 +10,16 @@
     "lint:eslint": "eslint --fix --ext .js,.ts,.vue,.pug .",
     "lint:style": "stylelint --fix \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
     "lint": "pnpm run lint:eslint && pnpm run lint:style",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commitlint": "commitlint --edit"
   },
   "lint-staged": {
     "*.{js,ts,vue}": "eslint --fix",
     "*.{css,scss,sass,html,vue}": "stylelint --fix"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
     "@nuxt/devtools": "latest",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/eslint-module": "^4.1.0",
