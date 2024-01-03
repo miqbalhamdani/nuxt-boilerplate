@@ -10,10 +10,10 @@ export default defineNuxtConfig({
   },
 
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
+    pageTransition: { name: "page", mode: "out-in" },
   },
 
-  css: ["@/assets/styles/main.scss"],
+  css: ["@/assets/scss/app.scss"],
 
   modules: [
     [
@@ -24,7 +24,13 @@ export default defineNuxtConfig({
         },
       },
     ],
+    "@nuxtjs/eslint-module",
+    "@nuxtjs/stylelint-module",
   ],
+
+  typescript: {
+    typeCheck: true,
+  },
 
   devtools: { enabled: true },
 });

@@ -2,13 +2,28 @@
   <div>
     <ul class="nav">
       <li class="nav-item">
-        <NuxtLink class="nav-link active" to="/">Home</NuxtLink>
+        <NuxtLink
+          class="nav-link active"
+          to="/"
+        >
+          Home
+        </NuxtLink>
       </li>
       <li class="nav-item">
-        <NuxtLink class="nav-link" to="/about">About page</NuxtLink>
+        <NuxtLink
+          class="nav-link"
+          to="/about"
+        >
+          About page
+        </NuxtLink>
       </li>
       <li class="nav-item">
-        <NuxtLink class="nav-link" to="/contact">Contact page</NuxtLink>
+        <NuxtLink
+          class="nav-link"
+          to="/contact"
+        >
+          Contact page
+        </NuxtLink>
       </li>
     </ul>
 
@@ -23,6 +38,7 @@
 .page-leave-active {
   transition: all 0.4s;
 }
+
 .page-enter-from,
 .page-leave-to {
   opacity: 0;
