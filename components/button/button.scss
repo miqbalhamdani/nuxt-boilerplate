@@ -3,13 +3,12 @@
 .button {
   display: flex;
   align-items: center;
-  font-weight: 700;
+  justify-content: center;
   cursor: pointer;
   transition: color 0.5s, background-color 0.5s;
   text-transform: capitalize;
-  min-height: auto;
-  line-height: normal;
-  column-gap: 8px;
+  column-gap: 6px;
+  border-radius: 8px;
   svg {
     width: 18px;
     height: 18px;
@@ -17,56 +16,498 @@
   }
   &.--default {
     border: none;
-    background-color: $green-100;
-    color: $white;
+    background-color: $primary-green-100;
+    color: $black-00;
     &:hover {
-      background: $green-110;
+      background: $primary-green-110;
     }
     &:focus {
-      background: $green-120;
+      background: $primary-green-120;
     }
   }
-  &.--green-outline {
-    background-color: transparent;
-    color: $green-100;
-    border: 1px solid $green-100;
+
+  // Primary Green
+  &.--primary-green {
+    border: none;
+    background-color: $primary-green-100;
+    color: $black-00;
     &:hover {
-      color: $green-120;
-      border: 1px solid $green-120;
+      background: $primary-green-110;
     }
     &:focus {
-      color: $green-120;
-      border: 1px solid $green-120;
+      background: $primary-green-120;
     }
+  }
+  &.--primary-outline-green {
+    background-color: transparent;
+    color: $primary-green-100;
+    border: 1px solid $primary-green-100;
+    &:hover {
+      color: $primary-green-110;
+      border: 1px solid $primary-green-110;
+    }
+    &:focus {
+      color: $primary-green-120;
+      border: 1px solid $primary-green-120;
+    }
+  }
+  &.--primary-text-green {
+    border: none;
+    background-color: transparent;
+    color: $primary-green-100;
+    &:hover {
+      background-color: $primary-green-40;
+      color: $primary-green-110;
+    }
+    &:focus {
+      background-color: $primary-green-60;
+      color: $primary-green-120;
+    }
+  }
+  // End Primary Green
+
+  // Primary Brown
+  &.--primary-brown {
+    border: none;
+    background-color: $primary-brown-100;
+    color: $black-00;
+    &:hover {
+      background: $primary-brown-110;
+    }
+    &:focus {
+      background: $primary-brown-120;
+    }
+  }
+  &.--primary-outline-brown {
+    background-color: transparent;
+    color: $primary-brown-100;
+    border: 1px solid $primary-brown-100;
+    &:hover {
+      color: $primary-brown-120;
+      border: 1px solid $primary-brown-120;
+    }
+    &:focus {
+      color: $primary-brown-120;
+      border: 1px solid $primary-brown-120;
+    }
+  }
+  &.--primary-text-brown {
+    border: none;
+    background-color: transparent;
+    color: $primary-brown-100;
+    &:hover {
+      background-color: $primary-brown-40;
+      color: $primary-brown-110;
+    }
+    &:focus {
+      background-color: $primary-brown-60;
+      color: $primary-brown-120;
+    }
+  }
+  // End Primary Brown
+
+  // Primary Sand
+  &.--primary-sand {
+    border: none;
+    background-color: $primary-sand-100;
+    color: $black-00;
+    &:hover {
+      background: $primary-sand-110;
+    }
+    &:focus {
+      background: $primary-sand-120;
+    }
+  }
+  &.--primary-outline-sand {
+    background-color: transparent;
+    color: $primary-sand-100;
+    border: 1px solid $primary-sand-100;
+    &:hover {
+      color: $primary-sand-120;
+      border: 1px solid $primary-sand-120;
+    }
+    &:focus {
+      color: $primary-sand-120;
+      border: 1px solid $primary-sand-120;
+    }
+  }
+  &.--primary-text-sand {
+    border: none;
+    background-color: transparent;
+    color: $primary-sand-100;
+    &:hover {
+      background: $primary-sand-40;
+      color: $primary-sand-110;
+    }
+    &:focus {
+      background: $primary-sand-60;
+      color: $primary-sand-120;
+    }
+  }
+  // End Primary Sand
+
+  // Koltiva’s Product KoltiTrace
+  &.--product-green {
+    border: none;
+    background-color: $product-green-100;
+    color: $black-00;
+    &:hover {
+      background: $product-green-110;
+    }
+    &:focus {
+      background: $product-green-120;
+    }
+  }
+  &.--product-outline-green {
+    background-color: transparent;
+    color: $product-green-100;
+    border: 1px solid $product-green-100;
+    &:hover {
+      color: $product-green-120;
+      border: 1px solid $product-green-120;
+    }
+    &:focus {
+      color: $product-green-120;
+      border: 1px solid $product-green-120;
+    }
+  }
+  &.--product-text-green {
+    border: none;
+    background-color: transparent;
+    color: $product-green-100;
+    &:hover {
+      background: $product-green-40;
+      color: $product-green-110;
+    }
+    &:focus {
+      background: $product-green-60;
+      color: $product-green-120;
+    }
+  }
+  // End Koltiva’s Product KoltiTrace
+
+  // Koltiva’s Product KoltiTrade
+  &.--product-red {
+    border: none;
+    background-color: $product-red-100;
+    color: $black-00;
+    &:hover {
+      background: $product-red-110;
+    }
+    &:focus {
+      background: $product-red-120;
+    }
+  }
+  &.--product-outline-red {
+    background-color: transparent;
+    color: $product-red-100;
+    border: 1px solid $product-red-100;
+    &:hover {
+      color: $product-red-120;
+      border: 1px solid $product-red-120;
+    }
+    &:focus {
+      color: $product-red-120;
+      border: 1px solid $product-red-120;
+    }
+  }
+  &.--product-text-red {
+    border: none;
+    background-color: transparent;
+    color: $product-red-100;
+    &:hover {
+      background: $product-red-40;
+      color: $product-red-110;
+    }
+    &:focus {
+      background: $product-red-60;
+      color: $product-red-120;
+    }
+  }
+  // End Koltiva’s Product KoltiTrade
+
+  // Koltiva’s Product KoltiPay
+  &.--product-blue {
+    border: none;
+    background-color: $product-blue-100;
+    color: $black-00;
+    &:hover {
+      background: $product-blue-110;
+    }
+    &:focus {
+      background: $product-blue-120;
+    }
+  }
+  &.--product-outline-blue {
+    background-color: transparent;
+    color: $product-blue-100;
+    border: 1px solid $product-blue-100;
+    &:hover {
+      color: $product-blue-120;
+      border: 1px solid $product-blue-120;
+    }
+    &:focus {
+      color: $product-blue-120;
+      border: 1px solid $product-blue-120;
+    }
+  }
+  &.--product-text-blue {
+    border: none;
+    background-color: transparent;
+    color: $product-blue-100;
+    &:hover {
+      background: $product-blue-40;
+      color: $product-blue-110;
+    }
+    &:focus {
+      background: $product-blue-60;
+      color: $product-blue-120;
+    }
+  }
+  // End Koltiva’s Product KoltiPay
+
+  // Koltiva’s Product KoltiSkills
+  &.--product-brown {
+    border: none;
+    background-color: $product-brown-100;
+    color: $black-00;
+    &:hover {
+      background: $product-brown-110;
+    }
+    &:focus {
+      background: $product-brown-120;
+    }
+  }
+  &.--product-outline-brown {
+    background-color: transparent;
+    color: $product-brown-100;
+    border: 1px solid $product-brown-100;
+    &:hover {
+      color: $product-brown-120;
+      border: 1px solid $product-brown-120;
+    }
+    &:focus {
+      color: $product-brown-120;
+      border: 1px solid $product-brown-120;
+    }
+  }
+  &.--product-text-brown {
+    border: none;
+    background-color: transparent;
+    color: $product-brown-100;
+    &:hover {
+      background: $product-brown-40;
+      color: $product-brown-110;
+    }
+    &:focus {
+      background: $product-brown-60;
+      color: $product-brown-120;
+    }
+  }
+  // End Koltiva’s Product KoltiSkills
+
+  // Accent Success
+  &.--accent-success {
+    border: none;
+    background-color: $accent-success-100;
+    color: $black-00;
+    &:hover {
+      background: $accent-success-110;
+    }
+    &:focus {
+      background: $accent-success-120;
+    }
+  }
+  &.--accent-outline-success {
+    background-color: transparent;
+    color: $accent-success-100;
+    border: 1px solid $accent-success-100;
+    &:hover {
+      color: $accent-success-110;
+      border: 1px solid $accent-success-110;
+    }
+    &:focus {
+      color: $accent-success-120;
+      border: 1px solid $accent-success-120;
+    }
+  }
+  &.--accent-text-success {
+    border: none;
+    background-color: transparent;
+    color: $accent-success-100;
+    &:hover {
+      background: $accent-success-40;
+      color: $accent-success-110;
+    }
+    &:focus {
+      background: $accent-success-60;
+      color: $accent-success-120;
+    }
+  }
+  // End Accent Success
+
+  // Accent Info
+  &.--accent-info {
+    border: none;
+    background-color: $accent-info-100;
+    color: $black-00;
+    &:hover {
+      background: $accent-info-110;
+    }
+    &:focus {
+      background: $accent-info-120;
+    }
+  }
+  &.--accent-outline-info {
+    background-color: transparent;
+    color: $accent-info-100;
+    border: 1px solid $accent-info-100;
+    &:hover {
+      color: $accent-info-110;
+      border: 1px solid $accent-info-110;
+    }
+    &:focus {
+      color: $accent-info-120;
+      border: 1px solid $accent-info-120;
+    }
+  }
+  &.--accent-text-info {
+    border: none;
+    background-color: transparent;
+    color: $accent-info-100;
+    &:hover {
+      background: $accent-info-40;
+      color: $accent-info-110;
+    }
+    &:focus {
+      background: $accent-info-60;
+      color: $accent-info-120;
+    }
+  }
+  // End Accent Info
+
+  // Accent Warning
+  &.--accent-warning {
+    border: none;
+    background-color: $accent-warning-100;
+    color: $black-00;
+    &:hover {
+      background: $accent-warning-110;
+    }
+    &:focus {
+      background: $accent-warning-120;
+    }
+  }
+  &.--accent-outline-warning {
+    background-color: transparent;
+    color: $accent-warning-100;
+    border: 1px solid $accent-warning-100;
+    &:hover {
+      color: $accent-warning-110;
+      border: 1px solid $accent-warning-110;
+    }
+    &:focus {
+      color: $accent-warning-120;
+      border: 1px solid $accent-warning-120;
+    }
+  }
+  &.--accent-text-warning {
+    border: none;
+    background-color: transparent;
+    color: $accent-warning-100;
+    &:hover {
+      background: $accent-warning-40;
+      color: $accent-warning-110;
+    }
+    &:focus {
+      background: $accent-warning-60;
+      color: $accent-warning-120;
+    }
+  }
+  // End Accent Warning
+
+  // Accent Danger
+  &.--accent-danger {
+    border: none;
+    background-color: $accent-danger-100;
+    color: $black-00;
+    &:hover {
+      background: $accent-danger-110;
+    }
+    &:focus {
+      background: $accent-danger-120;
+    }
+  }
+  &.--accent-outline-danger {
+    background-color: transparent;
+    color: $accent-danger-100;
+    border: 1px solid $accent-danger-100;
+    &:hover {
+      color: $accent-danger-110;
+      border: 1px solid $accent-danger-110;
+    }
+    &:focus {
+      color: $accent-danger-120;
+      border: 1px solid $accent-danger-120;
+    }
+  }
+  &.--accent-text-danger {
+    border: none;
+    background-color: transparent;
+    color: $accent-danger-100;
+    &:hover {
+      background: $accent-danger-40;
+      color: $accent-danger-110;
+    }
+    &:focus {
+      background: $accent-danger-60;
+      color: $accent-danger-120;
+    }
+  }
+  // End Accent Danger
+
+  // Size
+  &.--extra-large {
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+    height: 56px;
+    font-size: 22px;
+    padding: 14px;
+    min-width: 114px;
+    font-weight: 400;
   }
   &.--large {
     svg {
-      width: 18px;
-      height: 18px;
+      width: 20px;
+      height: 20px;
     }
-    height: 38px;
-    font-size: 14px;
-    border-radius: 8px;
-    padding: 10px;
+    height: 48px;
+    font-size: 16px;
+    padding: 14px;
+    min-width: 96px;
+    font-weight: 500;
   }
   &.--medium {
-    svg {
-      width: 18px;
-      height: 18px;
-    }
-    height: 34px;
-    font-size: 14px;
-    border-radius: 8px;
-    padding: 8px;
-  }
-  &.--small {
     svg {
       width: 16px;
       height: 16px;
     }
+    height: 40px;
+    font-size: 14px;
+    padding: 10px;
+    min-width: 80px;
+    font-weight: 500;
+  }
+  &.--small {
+    svg {
+      width: 12px;
+      height: 12px;
+    }
     height: 30px;
     font-size: 12px;
-    border-radius: 6px;
     padding: 8px;
   }
+  // End Size
 }

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import KtvButton from "@/components/button/Button.vue";
+import KtvTextField from "@/components/form/input/Input.vue";
 const runtimeConfig = useRuntimeConfig();
 
 // print /api_secret_token on terminal, and replace a nuxt config runtimeConfig
@@ -30,7 +31,11 @@ console.log("data: ", data);
     </h1>
 
     <KtvButton label="nastar"></KtvButton>
-    <KtvButton label="nastar" type="green-outline"></KtvButton>
+    <KtvButton
+      label="nastar"
+      type="accent-danger"
+      size="extra-large"
+    ></KtvButton>
     <KtvButton icon="IconHome"></KtvButton>
     <KtvButton
       label="Button Small"
@@ -44,6 +49,7 @@ console.log("data: ", data);
       rightIcon="IconCube"
       size="large"
     ></KtvButton>
+    <KtvTextField />
 
     <!-- <q-btn color="primary" label="Primary" />
     <QBtn color="secondary" label="Secondary" />
