@@ -27,9 +27,24 @@ export default defineNuxtConfig({
       },
     ],
     'nuxt-quasar-ui',
+    '@nuxtjs/tailwindcss', 
+    'shadcn-nuxt',
   ],
+  
   quasar: {
     sassVariables: '@/assets/styles/quasar.variables.scss'
+  },
+
+  shadcn: {
+    /**
+     * Prefix for all the imported component
+     */
+    prefix: '',
+    /**
+     * Directory that the component lives in.
+     * @default "./components/ui"
+     */
+    componentDir: './components/ui'
   },
 
   devtools: { enabled: true },

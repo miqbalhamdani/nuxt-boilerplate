@@ -12,17 +12,25 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/google-fonts": "^3.1.3",
+    "@nuxtjs/tailwindcss": "^6.10.4",
     "@tabler/icons-vue": "^2.44.0",
     "nuxt": "^3.8.2",
     "nuxt-quasar-ui": "^2.0.7",
     "sass": "^1.69.5",
+    "shadcn-nuxt": "^0.8.6",
     "vue": "^3.3.12",
     "vue-tippy": "^6.4.1",
     "vue3-lottie": "^3.2.0"
   },
   "dependencies": {
     "@quasar/extras": "^1.16.9",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "lucide-vue-next": "^0.307.0",
     "quasar": "^2.14.2",
+    "radix-vue": "^1.2.7",
+    "tailwind-merge": "^2.2.0",
+    "tailwindcss-animate": "^1.0.7",
     "vue-router": "^4.2.5"
   }
 }
