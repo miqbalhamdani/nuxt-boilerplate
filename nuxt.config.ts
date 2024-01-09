@@ -22,11 +22,15 @@ export default defineNuxtConfig({
       "@nuxtjs/google-fonts",
       {
         families: {
-          Roboto: true,
+          // Roboto: true,
         },
       },
     ],
+    'nuxt-quasar-ui',
   ],
+  quasar: {
+    sassVariables: '@/assets/styles/quasar.variables.scss'
+  },
 
   devtools: { enabled: true },
 });

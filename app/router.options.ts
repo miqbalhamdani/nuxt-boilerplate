@@ -1,4 +1,5 @@
 import type { RouterConfig } from "@nuxt/schema";
+import PassThrough from "~/components/PassThrough";
 
 export default <RouterConfig>{
   // https://router.vuejs.org/api/interfaces/routeroptions.html#routes
@@ -11,12 +12,37 @@ export default <RouterConfig>{
     {
       name: "about",
       path: "/about",
-      component: () => import("~/pages/about.vue").then((r) => r.default || r),
+      component: () => import("~/pages/about.vue"),
     },
     {
       name: "contact",
       path: "/contact",
-      component: () => import("~/pages/contact.vue").then((r) => r.default || r),
+      component: () => import("~/pages/contact.vue"),
+    },
+
+    // master
+    {
+      path: "/master",
+      component: PassThrough,
+      children: [
+        {
+          path: 'category',
+          component: () => import("~/pages/master/category/categoryIndex.vue"),
+          children: [
+            {
+              path: '',
+              name: 'master.category.index',
+              component: () => import("~/pages/master/category/categoryIndex.vue"),
+            },
+            {
+              path: 'form',
+              name: 'master.category.form',
+              component: () => import("~/pages/master/category/categoryForm.vue"),
+            },
+          ]
+        },
+
+      ],
     },
   ],
 };
