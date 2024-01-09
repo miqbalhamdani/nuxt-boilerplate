@@ -26,6 +26,7 @@ export default <RouterConfig>{
       component: PassThrough,
       children: [
         {
+          // category
           path: 'category',
           component: () => import("~/pages/master/category/categoryIndex.vue"),
           children: [
@@ -38,6 +39,23 @@ export default <RouterConfig>{
               path: 'form',
               name: 'master.category.form',
               component: () => import("~/pages/master/category/categoryForm.vue"),
+            },
+          ]
+        },
+        {
+          // level
+          path: 'level',
+          component: () => import("~/pages/master/level/levelIndex.vue"),
+          children: [
+            {
+              path: '',
+              name: 'master.level.index',
+              component: () => import("~/pages/master/level/levelIndex.vue"),
+            },
+            {
+              path: 'form',
+              name: 'master.level.form',
+              component: () => import("~/pages/master/level/levelForm.vue"),
             },
           ]
         },
