@@ -4,19 +4,14 @@ import KtvTextField from "~/components/form/input/Input.vue";
 import KtvTextarea from "@/components/form/textarea/Textarea.vue";
 import KtvInputSelect from "~/components/form/input-select/InputSelect.vue";
 
-const TestingTextArea = ref("");
-const TextAreaIsValid = computed(() => TestingTextArea.value.length <= 3);
+const textarea = ref("");
+const textareaIsValid = computed(() => textarea.value.length <= 3);
 
-const TestingTextField = ref("");
-const TestingIsValid = computed(() => TestingTextField.value.length <= 3);
+const textField = ref("");
+const textFieldIsValid = computed(() => textField.value.length <= 3);
 
-const inputKoltiva = ref("");
-const KoltivaIsValid = computed(() => inputKoltiva.value.length <= 15);
-
-const TestingInputSelect = ref("");
-const InputSelectIsValid = computed(() => TestingInputSelect.value.length <= 7);
-
-let dataTextArea = "";
+const inputSelect = ref("");
+const inputSelectIsValid = computed(() => inputSelect.value.length <= 7);
 </script>
 
 <template>
@@ -27,14 +22,14 @@ let dataTextArea = "";
 
     <div class="d-flex">
       <KtvTextarea
-        v-model="TestingTextArea"
-        label="Testing Label"
-        tooltip="Testing Tooltip Text"
-        placeholder="Testing Placeholder"
-        hint="Testing Supporting Text"
-        :errorValidation="!TextAreaIsValid"
-        errorMessage="Testing Error Message"
-        maxlength="100"
+        v-model="textarea"
+        label="Textarea"
+        tooltip="Tooltip Textarea"
+        placeholder="Placeholder Textarea"
+        hint="Supporting Textarea"
+        :errorValidation="!textareaIsValid"
+        errorMessage="Error Message"
+        maxlength="50"
         counter
       />
     </div>
@@ -57,36 +52,25 @@ let dataTextArea = "";
     </div>
     <div class="d-flex">
       <KtvTextField
-        v-model="TestingTextField"
-        label="Testing Label"
-        tooltip="Testing Tooltip Text"
-        placeholder="Testing Placeholder"
-        hint="Testing Supporting Text"
+        v-model="textField"
+        label="Textfield"
+        tooltip="Tooltip Textfield"
+        placeholder="Placeholder Textfield"
+        hint="Supporting Textfield"
         icon
-        :errorValidation="!TestingIsValid"
-        errorMessage="Testing Error Message"
-      />
-      <KtvTextField
-        v-model="inputKoltiva"
-        label="Label Koltiva"
-        tooltip="Tooltip Text Koltiva"
-        placeholder="Placeholder Koltiva"
-        hint="Supporting Text Koltiva"
-        type="number"
-        icon
-        :errorValidation="!KoltivaIsValid"
-        errorMessage="Error Message Koltiva"
+        :errorValidation="!textFieldIsValid"
+        errorMessage="Error Message"
       />
     </div>
     <div class="d-flex">
       <KtvInputSelect
-        v-model="TestingInputSelect"
-        label="Testing Input Select"
-        tooltip="Testing Tooltip Input Select"
+        v-model="inputSelect"
+        label="Input Select"
+        tooltip="Tooltip Input Select"
         placeholder="Placeholder Input Select"
         hint="Supporting Input Select"
-        :errorValidation="!InputSelectIsValid"
-        errorMessage="Testing Error Message"
+        :errorValidation="!inputSelectIsValid"
+        errorMessage="Error Message"
       />
     </div>
   </div>
