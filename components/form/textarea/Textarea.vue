@@ -1,105 +1,87 @@
 <script setup>
-import { IconInfoCircle, IconInfoTriangleFilled } from "@tabler/icons-vue";
-
 const props = defineProps({
-    placeholder: {
-        type: String,
-        default: 'placeholder'
-    },
-    label: {
-        type: String,
-        default: 'Label',
-    },
-    supportText: {
-        type: String,
-        default: '',
-    },
-    characterText: {
-        type: String,
-        default: '',
-    },
-    maxLength: {
-        type: Number,
-        default: null,
-    },
-    tooltip: {
-        type: String,
-        default: '',
-    },
-    hasError: {
-        type: Boolean,
-        default: false,
-    },
-    modelValue: {
-        type: String,
-        default: '',
-    },
+  modelValue: {
+    type: [String, Number],
+    required: true,
+  },
+  label: {
+    type: String,
+    default: "Label",
+  },
+  maxlength: Number,
+  counter: Boolean,
+  tooltip: {
+    type: [Boolean, String],
+    default: [false, "Text Tooltip"],
+  },
+  placeholder: {
+    type: String,
+    default: "Placeholder",
+  },
+  hint: {
+    type: String,
+    default: "Supporting Text",
+  },
+  errorValidation: {
+    type: [Boolean],
+    default: false,
+  },
+  errorMessage: {
+    type: String,
+    default: "Error Message",
+  },
+  disable: Boolean,
 });
+import { IconInfoCircle, IconAlertTriangleFilled } from "@tabler/icons-vue";
+const modelValue = ref("");
 
-const emits = defineEmits(['update:modelValue']);
-const text = ref(props.modelValue);
-watch(text, (newValue) => {
-    emits('update:modelValue', newValue);
+// Props V-Model
+const emit = defineEmits(["update:modelValue"]);
+const model = ref(modelValue);
+watch(model, (newValue) => {
+  emit("update:modelValue", newValue);
 });
 </script>
 
 <template>
-    <div class="container">
-        <div class="header">
-            <label>{{ label }}</label>
-            <div v-if="tooltip" class="inline cursor-pointer">
-                <IconInfoCircle />
-                <q-tooltip>
-                    {{ tooltip }}
-                </q-tooltip>
-            </div>
-        </div>
-        <q-input
-            v-model="text"
-            outlined
-            type="textarea"
-            :placeholder="placeholder"
-            :maxLength="maxLength"
-            :class="[ 'ktv-textarea', { 'error': hasError } ]"
-        />
-        <IconInfoTriangleFilled v-if="hasError" class="icon-error" />
-        <div v-if="supportText || characterText" class="footer">
-            <span>{{ supportText }}</span>
-            <span>{{ characterText }}</span>
-        </div>
+  <div class="ktv-textarea">
+    <div
+      class="ktv-d-flex ktv-justify-content-between ktv-align-items-center label-input"
+    >
+      <label>{{ label }}</label>
+      <div style="height: 16px" v-if="tooltip">
+        <IconInfoCircle />
+        <q-tooltip
+          transition-show="scale"
+          transition-hide="scale"
+          :offset="[0, 3]"
+        >
+          {{ tooltip }}
+        </q-tooltip>
+      </div>
     </div>
+    <q-input
+      v-model="modelValue"
+      :hint="hint"
+      :placeholder="placeholder"
+      :error="errorValidation"
+      :disable="disable"
+      type="textarea"
+      outlined
+      no-error-icon
+      hide-bottom-space
+      autogrow
+      :maxlength="maxlength"
+      :counter="counter"
+    >
+      <template #append v-if="errorValidation">
+        <IconAlertTriangleFilled />
+      </template>
+      <template #error> {{ errorMessage }} </template>
+    </q-input>
+  </div>
 </template>
 
 <style lang="scss">
 @import url("./textarea.scss");
-</style>
-
-<style lang="scss" scoped>
-@import "@/assets/scss/_variable.scss";
-
-.container {
-    position: relative;
-    .header {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 4px;
-        svg {
-            width: 16px;
-            height: 16px;
-            color: #9F9FA0;
-        }
-    }
-    .footer {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 4px;
-        span {
-            color: $black-40;
-            font-size: 12px;
-            font-weight: 400;
-            line-height: 16px;
-            letter-spacing: 0.4px;
-        }
-    }
-}
 </style>

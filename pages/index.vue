@@ -4,6 +4,9 @@ import KtvTextField from "~/components/form/input/Input.vue";
 import KtvTextarea from "@/components/form/textarea/Textarea.vue";
 import KtvInputSelect from "~/components/form/input-select/InputSelect.vue";
 
+const TestingTextArea = ref("");
+const TextAreaIsValid = computed(() => TestingTextArea.value.length <= 3);
+
 const TestingTextField = ref("");
 const TestingIsValid = computed(() => TestingTextField.value.length <= 3);
 
@@ -23,7 +26,17 @@ let dataTextArea = "";
     </h1>
 
     <div class="d-flex">
-      <KtvTextarea v-model="dataTextArea" label="judul" tooltip="information" placeholder="nama" supportText="text kiri" characterText="0/200" maxLength="10" :hasError="false"/>
+      <KtvTextarea
+        v-model="TestingTextArea"
+        label="Testing Label"
+        tooltip="Testing Tooltip Text"
+        placeholder="Testing Placeholder"
+        hint="Testing Supporting Text"
+        :errorValidation="!TextAreaIsValid"
+        errorMessage="Testing Error Message"
+        maxlength="100"
+        counter
+      />
     </div>
     <div class="d-flex">
       <KtvButton label="nastar"></KtvButton>

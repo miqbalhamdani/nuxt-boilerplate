@@ -1,77 +1,127 @@
-@import "@/assets/scss/_variable.scss";
+@import "@/assets/scss/style.scss";
 
 .ktv-textarea {
-    .q-field__control {
-        border-radius: 8px;
-        &::before {
-            border-color: #BCBCBC;
-        }
+  max-width: 350px;
+  .label-input {
+    padding: 0 4px 8px 4px;
+    label {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.1px;
+      color: $black-100;
+      line-height: 20px;
+    }
+    svg {
+      width: 16px;
+      height: 16px;
+      color: $black-50;
+      stroke-width: 1.5;
+    }
+  }
+  .q-field--outlined {
+    &.q-field--error.q-field--highlighted.q-field--focused {
+      .icon-close {
+        display: flex;
+      }
+    }
+    &.q-field--error.q-field--highlighted {
+      .icon-close {
+        display: none;
+      }
+      .q-field__append.q-anchor--skip {
+        display: none;
+      }
+    }
+    &.q-field--highlighted {
+      .q-field__control {
         &::after {
-            border: none !important;
-            background: none;
+          border-color: $accent-info-100;
         }
+      }
+      .q-field__append {
+        display: flex;
+        // display: block;
+      }
+    }
+    &.q-field--error {
+      .q-field__control {
+        &::after {
+          border-color: $accent-danger-100;
+        }
+        .q-icon {
+          // display: none;
+          display: none;
+        }
+      }
+      .q-field__bottom {
+        .q-field__messages {
+          color: $accent-danger-100;
+        }
+      }
+      .q-field__append {
+        display: flex;
+        .tabler-icon-alert-triangle-filled {
+          color: $accent-danger-100;
+        }
+      }
+    }
+    &.q-field--disabled {
+      .q-field__control {
+        background: $black-20;
         .q-field__native {
-            color: $black-100;
-            &::placeholder {
-                color: $black-40;
-                font-size: 14px;
-                font-weight: 400;
-                letter-spacing: 0.5px;
-            }
+          color: $black-100;
+          &::placeholder {
+            color: $black-50;
+          }
         }
+      }
+      .q-field__append {
+        // display: none;
+        display: none;
+      }
     }
-    &.q-field--focused {
-        .q-field__control::before {
-            border: 2px solid $accent-info-100 !important;
-            background-color: $black-00;
-            border-radius: 8px;
+    .q-field__control {
+      border-radius: 8px;
+      padding: 0 10px;
+      //   height: 40px;
+      background: $black-00;
+      &:hover::before {
+        // border-color: $accent-info-100;
+        border-color: $black-50;
+      }
+      .q-field__native {
+        font-size: 14px;
+        font-weight: 400;
+        color: $black-100;
+        padding: 10px 0;
+        &::placeholder {
+          color: $black-50;
         }
+      }
+
+      .q-field__focusable-action {
+        // display: none;
+        display: none;
+      }
     }
-    &:hover {
-        .q-field__control::before {
-            border: 1px solid #9F9FA0;
-        }
+    .q-field__bottom {
+      padding: 4px 4px 0 4px;
+      .q-field__messages {
+        font-size: 12px;
+        font-weight: 400;
+        color: $black-60;
+        line-height: 16px;
+      }
     }
-    &.error {
-        &.q-field--focused {
-            .q-field__control::before {
-                border: none !important;
-            }
-        }
-        &:hover {
-            border: none !important;
-            .q-field__control::before {
-                border: none !important;
-            }
-        }
-        .q-field__control {
-            border-radius: 8px;
-            background-color: $black-00;
-            border: 2px solid $accent-danger-100 !important;
-            &::before {
-                border: none;
-                background-color: $black-00 !important;
-            }
-        }
-        ~.icon-error {
-            position: absolute;
-            top: 35px;
-            right: 10px;
-            width: 16px;
-            height: 16px;
-            color: red;
-        }
-        ~.footer {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 4px;
-            span:first-child {
-                color: $accent-danger-100;
-                font-size: 14px;
-                font-weight: 400;
-                line-height: 16px;
-                letter-spacing: 0.4px;
-            }
-        }
+    .q-field__append {
+      display: none;
+      height: 40px;
+      color: $black-100;
+      padding-left: 7px;
+      svg {
+        width: 16px;
+        height: 16px;
+      }
     }
+  }
 }
