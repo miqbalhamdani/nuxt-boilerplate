@@ -25,6 +25,10 @@
       background: $primary-green-120;
     }
   }
+  &[disabled] {
+    background: $black-20 !important;
+    color: $black-30 !important;
+  }
 
   // Primary Green
   &.--primary-green {
@@ -468,46 +472,74 @@
 
   // Size
   &.--extra-large {
-    svg {
-      width: 24px;
-      height: 24px;
-    }
     height: 56px;
     font-size: 22px;
     padding: 14px;
     min-width: 114px;
     font-weight: 400;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+    &.icon-only {
+      max-width: 56px;
+      max-height: 56px;
+      min-width: 56px;
+      min-height: 56px;
+      padding: 0;
+    }
   }
   &.--large {
-    svg {
-      width: 20px;
-      height: 20px;
-    }
     height: 48px;
     font-size: 16px;
     padding: 14px;
     min-width: 96px;
     font-weight: 500;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+    &.icon-only {
+      max-width: 48px;
+      max-height: 48px;
+      min-width: 48px;
+      min-height: 48px;
+      padding: 0;
+    }
   }
   &.--medium {
-    svg {
-      width: 16px;
-      height: 16px;
-    }
     height: 40px;
     font-size: 14px;
     padding: 10px;
     min-width: 80px;
     font-weight: 500;
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+    &.icon-only {
+      max-width: 40px;
+      max-height: 40px;
+      min-width: 40px;
+      min-height: 40px;
+      padding: 0;
+    }
   }
   &.--small {
+    height: 30px;
+    font-size: 12px;
+    padding: 8px;
     svg {
       width: 12px;
       height: 12px;
     }
-    height: 30px;
-    font-size: 12px;
-    padding: 8px;
+    &.icon-only {
+      max-width: 32px;
+      max-height: 32px;
+      min-width: 32px;
+      min-height: 32px;
+      padding: 0;
+    }
   }
   // End Size
 }

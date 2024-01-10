@@ -24,10 +24,6 @@ const props = defineProps({
     type: String,
     default: "text",
   },
-  icon: {
-    type: Boolean,
-    default: false,
-  },
   errorValidation: {
     type: [Boolean],
     default: false,
@@ -42,7 +38,7 @@ import {
   IconInfoCircle,
   IconCircleX,
   IconAlertTriangleFilled,
-  IconSearch,
+  IconChevronDown,
 } from "@tabler/icons-vue";
 const modelValue = ref("");
 const resetText = () => {
@@ -54,10 +50,23 @@ const model = ref(modelValue);
 watch(model, (newValue) => {
   emit("update:modelValue", newValue);
 });
+
+// Select
+const modelSelect = ref("Pilih");
+const stringOptions = ["cm", "mm", "kg"];
+const options = ref(stringOptions);
+const filterFn = (val, update, abort) => {
+  update(() => {
+    const needle = val.toLowerCase();
+    options.value = stringOptions.filter(
+      (v) => v.toLowerCase().indexOf(needle) > -1
+    );
+  });
+};
 </script>
 
 <template>
-  <div class="ktv-input">
+  <div class="ktv-input-select">
     <div
       class="ktv-d-flex ktv-justify-content-between ktv-align-items-center label-input"
     >
@@ -85,10 +94,8 @@ watch(model, (newValue) => {
       no-error-icon
       no-clear-icon
       hide-bottom-space
+      class="ktv-custom-input"
     >
-      <template #prepend v-if="icon">
-        <IconSearch />
-      </template>
       <template #append>
         <IconCircleX
           v-if="modelValue.length >= 1"
@@ -96,6 +103,20 @@ watch(model, (newValue) => {
           class="cursor-pointer icon-close"
         />
         <IconAlertTriangleFilled v-if="errorValidation" />
+        <q-select
+          borderless
+          fill-input
+          v-model="modelSelect"
+          input-debounce="0"
+          :options="options"
+          @filter="filterFn"
+          class="ktv-custom-select"
+          hide-dropdown-icon
+        >
+          <template #append>
+            <IconChevronDown />
+          </template>
+        </q-select>
       </template>
       <template #error> {{ errorMessage }} </template>
     </q-input>
@@ -103,5 +124,5 @@ watch(model, (newValue) => {
 </template>
 
 <style lang="scss">
-@import url("./input.scss");
+@import url("./input-select.scss");
 </style>
