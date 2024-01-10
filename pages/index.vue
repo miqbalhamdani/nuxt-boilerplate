@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import KtvButton from "@/components/button/Button.vue";
 import KtvTextField from "@/components/form/input/Input.vue";
+import KtvTextarea from "@/components/form/textarea/Textarea.vue";
 const runtimeConfig = useRuntimeConfig();
 
 // print /api_secret_token on terminal, and replace a nuxt config runtimeConfig
@@ -22,6 +23,8 @@ const { data } = await useAsyncData(async () => {
   return { hotels, patners };
 });
 console.log("data: ", data);
+
+let dataTextArea = "";
 </script>
 
 <template>
@@ -30,6 +33,7 @@ console.log("data: ", data);
       Nuxt Koltiva Boilerplate
     </h1>
 
+    <KtvTextarea v-model="dataTextArea" label="judul" tooltip="information" placeholder="nama" supportText="text kiri" characterText="0/200" maxLength="10" :hasError="false"/>
     <KtvButton label="nastar"></KtvButton>
     <KtvButton
       label="nastar"
