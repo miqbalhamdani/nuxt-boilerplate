@@ -26,6 +26,14 @@ const props = defineProps({
     type: String,
     default: "default",
   },
+  iconOnly: {
+    type: Boolean,
+    default: false,
+  },
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
   onClick: {
     type: Function,
     default: () => {},
@@ -42,18 +50,16 @@ const handleClick = () => {
 </script>
 
 <template>
-  <button :class="buttonClasses" @click="handleClick">
+  <button
+    :class="[buttonClasses, { 'icon-only': iconOnly }]"
+    @click="handleClick"
+    :disabled="disabled"
+  >
     <component :is="leftIconComponent"></component>
     <component :is="iconComponent"></component>
     <span v-if="label">{{ label }}</span>
     <component :is="rightIconComponent"></component>
   </button>
-  <!-- <q-btn :class="buttonClasses" @click="handleClick">
-    <component :is="leftIconComponent"></component>
-    <component :is="iconComponent"></component>
-    <span v-if="label">{{ label }}</span>
-    <component :is="rightIconComponent"></component>
-  </q-btn> -->
 </template>
 
 <style lang="scss" scoped>

@@ -15,6 +15,7 @@
         :selected-rows-label="getSelectedString"
         selection="multiple"
         v-model:selected="selected"
+        hide-pagination
       />
     </div>
   </div>
