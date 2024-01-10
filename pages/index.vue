@@ -3,6 +3,10 @@ import KtvButton from "~/components/button/Button.vue";
 import KtvTextField from "~/components/form/input/Input.vue";
 import KtvTextarea from "@/components/form/textarea/Textarea.vue";
 import KtvInputSelect from "~/components/form/input-select/InputSelect.vue";
+import KtvSelect from "~/components/form/select/Select.vue";
+
+const select = ref("");
+const selectIsValid = computed(() => select.value.length <= 3);
 
 const textarea = ref("");
 const textareaIsValid = computed(() => textarea.value.length <= 3);
@@ -12,6 +16,11 @@ const textFieldIsValid = computed(() => textField.value.length <= 3);
 
 const inputSelect = ref("");
 const inputSelectIsValid = computed(() => inputSelect.value.length <= 7);
+
+let dataOptions = ["Test1", "Test2", "Test3", "Test3", "Test3"];
+
+provide("dataOptions", dataOptions);
+// const options = ref(dataOptions);
 </script>
 
 <template>
@@ -20,6 +29,18 @@ const inputSelectIsValid = computed(() => inputSelect.value.length <= 7);
       Nuxt Koltiva Boilerplate
     </h1>
 
+    <div class="d-flex">
+      <KtvSelect
+        v-model="select"
+        label="Select"
+        tooltip="Tooltip Select"
+        placeholder="Placeholder Select"
+        hint="Supporting Select"
+        :errorValidation="!selectIsValid"
+        errorMessage="Error Message"
+        :options="dataOptions"
+      />
+    </div>
     <div class="d-flex">
       <KtvTextarea
         v-model="textarea"
