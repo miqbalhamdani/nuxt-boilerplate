@@ -26,41 +26,39 @@ export default <RouterConfig>{
       component: PassThrough,
       children: [
         {
-          // category
           path: 'category',
+          name: 'master.category.index',
           component: () => import("~/pages/master/category/categoryIndex.vue"),
-          children: [
-            {
-              path: '',
-              name: 'master.category.index',
-              component: () => import("~/pages/master/category/categoryIndex.vue"),
-            },
-            {
-              path: 'form',
-              name: 'master.category.form',
-              component: () => import("~/pages/master/category/categoryForm.vue"),
-            },
-          ]
         },
         {
-          // level
-          path: 'level',
-          component: () => import("~/pages/master/level/levelIndex.vue"),
-          children: [
-            {
-              path: '',
-              name: 'master.level.index',
-              component: () => import("~/pages/master/level/levelIndex.vue"),
-            },
-            {
-              path: 'form',
-              name: 'master.level.form',
-              component: () => import("~/pages/master/level/levelForm.vue"),
-            },
-          ]
+          path: 'category/form',
+          name: 'master.category.form',
+          component: () => import("~/pages/master/category/categoryForm.vue"),
         },
 
+        {
+          path: 'level',
+          name: 'master.level.index',
+          component: () => import("~/pages/master/level/levelIndex.vue"),
+        },
+        {
+          path: 'level/form',
+          name: 'master.level.form',
+          component: () => import("~/pages/master/level/levelForm.vue"),
+        },
       ],
+    },
+
+    // Course
+    // {
+    //   path: 'course',
+    //   name: 'course.index',
+    //   component: () => import("~/pages/master/level/levelIndex.vue"),
+    // },
+    {
+      path: '/course/form',
+      name: 'course.form',
+      component: () => import("~/pages/course/courseForm.vue"),
     },
   ],
 };
