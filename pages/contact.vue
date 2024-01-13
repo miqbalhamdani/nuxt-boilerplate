@@ -3,6 +3,8 @@
     <h1 class="d-flex justify-content-center fs-3 fw-bold text-secondary">
       Page Contact
     </h1>
+
+    <quasar-q-button color="black" label="Black">Iqbal </quasar-q-button>
   </div>
 </template>
 
